@@ -4,15 +4,15 @@ const reducer = (state, action) => {
       return {
         ...state,
         cart: [...state.cart, action.payload],
-      };
+      }
     case 'REMOVE_FROM_CART':
       return {
         ...state,
         cart: state.cart.filter(items => items.id !== action.payload.id),
-      };
+      }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default reducer;
+export default reducer
